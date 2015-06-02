@@ -1,1 +1,1 @@
-# Yate Another Model-View-ViewModel Framework
+# Yet Another Model-View-ViewModel Framework
