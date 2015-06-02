@@ -1,3 +1,5 @@
+//It's model
+
 'use strict';
 
 var app = require('express')(),
@@ -7,7 +9,7 @@ var app = require('express')(),
 app.set('port', process.env.PORT || 3000);
 
 //Setup serving static files
-app.use('/public', express.static(__dirname + '/public', {
+app.use('/public', require('express').static(__dirname + '/public', {
     index: false,
     maxAge: ((process.env.DEBUG === 'false') ? 15552000000 : 15000)
 }));
@@ -62,12 +64,10 @@ require('http').createServer(app).listen(app.get('port'), function () {
 require(__dirname + '/public/app.yate.js');
 var render = {
     "nojs": {
-        "home": yr.run('app', getData('nojs').home),
-        "projects": yr.run('app', getData('nojs').projects)
+        "home": yr.run('app', getData('nojs').home)
     },
     "js": {
-        "home": yr.run('app', getData().home),
-        "projects": yr.run('app', getData().projects)
+        "home": yr.run('app', getData().home)
     }
 };
 

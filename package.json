@@ -1,8 +1,8 @@
 {
   "name": "yamomof",
   "version": "0.1.0",
-  "description": "Yate Another Model-View-ViewModel Framework",
-  "main": "app.js",
+  "description": "Yet Another Model-View-ViewModel Framework",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
